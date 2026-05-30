@@ -14,4 +14,4 @@ Plataforma de comercio electrónico (E-commerce) enfocada en la venta y distribu
 * **PHP & MySQL:** Arquitectura del backend para el procesamiento de datos del e-commerce (ajusta si usas otro backend).
 
 ## ✒️ Desarrollador
-* **Armando León** - *Soluciones web a medida* - [Tu GitHub](https://github.com/JesusLeonV)
+* **Jesus Armando Leon Vasquez** - *Estudiante Ingenieria Informatica* - [GitHub](https://github.com/JesusLeonV)
