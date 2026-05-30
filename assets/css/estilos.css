@@ -1,0 +1,222 @@
+/* ==========================================================================
+   CARTONPETS - SISTEMA DE DISEÑO UNIFICADO
+   Concepto: Madera y Hoja (Ecológico y Respetuoso)
+   ========================================================================== */
+
+:root {
+    /* --- COLORES ESTRUCTURALES (FONDOS Y BLOQUES) --- */
+    --cafe-logo: #81a069;      /* Café madera principal */
+    --verde-suave: #927246;    /* Verde ecológico fondo */
+    --white: #fcfcfc;          /* CORREGIDO: Blanco puro para las tarjetas */
+    --accent: #5d4037;         /* Café más profundo para estados hover */
+
+    /* --- VARIABLES DE TEXTO AJUSTABLES --- */
+    --text-topbar: #ffffff;    /* Texto y enlaces de la barra superior */
+    --text-body: #fffdfa;      /* Texto general del cuerpo */
+    --text-titles: #6f5632;    /* Títulos principales, meses y nombres de mascotas */
+    --text-btn: #ffffff;       /* Texto dentro de los botones */
+    --text-footer: #ffffff;    /* Texto dentro del footer */
+}
+
+/* --- ESTILO GENERAL PARA LAS DESCRIPCIONES DE LOS 6 PRODUCTOS --- */
+.texto-descripcion-caja {
+    color: #ffffff !important; 
+}
+
+/* --- BASE --- */
+body {
+    background-color: var(--verde-suave) !important;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-body);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- COMPONENTES DE NAVEGACIÓN --- */
+.top-bar {
+    background-color: var(--cafe-logo) !important;
+    padding: 12px 0;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    margin-bottom: 0 !important;
+}
+
+.style-gap-fix {
+    margin-top: 0 !important;
+    position: relative;
+    top: -1px;
+}
+
+.top-bar a, .top-bar span {
+    color: var(--text-topbar) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo-circular-responsive {
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 4px solid var(--white) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+/* --- TARJETAS DE TIENDA --- */
+.product-card {
+    border-radius: 20px;
+    background: var(--white) !important;
+    border: none !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    padding: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.05) !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12) !important;
+}
+
+/* --- NUEVAS TARJETAS PARA EL MURO (ESTILO POLAROID) --- */
+.memorial-card {
+    background: var(--white) !important;
+    border-radius: 16px !important;
+    border: none !important;
+    box-shadow: 0 8px 20px rgba(111, 86, 50, 0.08) !important;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    padding: 12px;
+}
+
+.memorial-card:hover {
+    transform: translateY(-8px) scale(1.03) !important;
+    box-shadow: 0 12px 25px rgba(111, 86, 50, 0.15) !important;
+}
+
+/* Contenedor seguro para que las fotos no se deformen ni se estiren */
+.foto-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.foto-colaborador { 
+    width: 100% !important; 
+    height: 100% !important; 
+    object-fit: cover !important; 
+    transition: transform 0.5s ease;
+}
+
+.memorial-card:hover .foto-colaborador {
+    transform: scale(1.06);
+}
+
+.nombre-mascota {
+    color: var(--text-titles);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- BOTONES --- */
+.btn-dark {
+    background-color: var(--cafe-logo) !important;
+    color: var(--text-btn) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: var(--accent) !important;
+    transform: scale(1.05);
+}
+
+/* --- DISEÑO DEL MURO (GALERÍA) --- */
+.mes-separator {
+    color: var(--text-titles);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 30px 0;
+    font-size: 1.4rem;
+}
+
+.mes-separator::before, .mes-separator::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--text-titles);
+    opacity: 0.2;
+    margin: 0 20px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--cafe-logo) !important;
+    color: var(--text-footer) !important;
+    padding: 40px 0 30px 0;
+    margin-top: auto; 
+    text-align: center;
+}
+
+footer h5 {
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: var(--text-footer) !important;
+}
+
+footer p, footer small {
+    color: var(--text-footer) !important;
+    opacity: 0.9;
+}
+
+/* --- UTILIDADES --- */
+.btn-whatsapp-float {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 10000 !important;
+}
+
+.btn-whatsapp-float img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    border: 2px solid rgb(52, 194, 30) !important;
+}
+
+/* --- SECCIÓN RESPONSIVA --- */
+@media (max-width: 768px) {
+    .top-bar .logo-circular-responsive {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 15px auto !important; 
+        display: block !important; 
+    }
+
+    .product-card:hover, .memorial-card:hover {
+        transform: translateY(-5px) scale(1.02) !important;
+    }
+
+    .foto-wrapper {
+        height: 170px;
+    }
+
+    .mes-separator {
+        margin: 35px 0 20px 0;
+        font-size: 1.1rem;
+    }
+}
